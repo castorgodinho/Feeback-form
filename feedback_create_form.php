@@ -1,4 +1,5 @@
   <?php
+  session_start();
   ob_start();
   if (!isset($_SESSION['name']) && empty($_SESSION['name'])) {
     echo "Please log in to access these rights! <script> window.location='http://www.fossclubgoa.com/chowgulefossclub/feedbackproject/feedback_login.php'; </script>";
@@ -78,7 +79,6 @@ if(isset($_POST) && sizeof($_POST)){
 </head>
 <body>
   <?php
-    session_start();
     if(isset($_SESSION['name'])){
   ?>
   <nav class="navbar navbar-default">
